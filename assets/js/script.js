@@ -18,7 +18,7 @@ var questionList = [
         answer: "both a client-side and server-side",
     },
     {
-        question: "What is the value of the variable x after executing the following JavaScript code? var x = ((2 < 1) || (3 <= 3));",
+        question: "What is the value of the variable x after executing the following JavaScript code?<br> var x = ((2 < 1) || (3 <= 3));",
         choices: ["True", "False", "Undefined", "The code will error and not execute"],
         answer: "True",
     },
@@ -121,7 +121,7 @@ function generateQuestion(index) {
 
 
     // Generate question and corresponding answer choices
-    activeQuestion.textContent = "(" + (index+1) + "/" + questionList.length + ") " + questionList[index].question;
+    activeQuestion.innerHTML = "(" + (index+1) + "/" + questionList.length + ") " + questionList[index].question;
     generateChoices();
 }
 
